@@ -37,3 +37,16 @@ for (let i=0; i<number.length; i++){
         displayFirstNumber.textContent += number[i].textContent;
     })
 }
+
+let firstValueOfOperation = null;
+let operatorOfOperation = null;
+
+let operators= document.querySelectorAll('.operator');
+
+for (let i=0; i<operators.length; i++){
+    operators[i].addEventListener('click', function(){
+        firstValueOfOperation = displayFirstNumber.textContent;
+        operatorOfOperation = operators[i].textContent;
+        displayFirstNumber.textContent = '';
+    })
+}

@@ -28,3 +28,12 @@ const operate = (operator, a, b) => {
             return null;
     }
 }
+
+let displayFirstNumber = document.getElementById('display');
+let number = document.querySelectorAll('.number');
+
+for (let i=0; i<number.length; i++){
+    number[i].addEventListener('click', function(){
+        displayFirstNumber.textContent += number[i].textContent;
+    })
+}

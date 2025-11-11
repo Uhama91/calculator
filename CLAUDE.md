@@ -8,6 +8,37 @@ Calculator project from The Odin Project curriculum. Implements a functional cal
 
 **Official Project Page**: https://www.theodinproject.com/lessons/foundations-calculator
 
+### User's Learning Context
+
+**This is a Foundations curriculum project.** The user has already completed all prior lessons and projects before Calculator, including:
+
+**HTML & CSS Knowledge:**
+- HTML structure, elements, tags, boilerplate
+- CSS cascade, box model, block/inline elements
+- Flexbox (growing/shrinking, axes, alignment)
+
+**JavaScript Knowledge:**
+- ✅ Variables, operators, data types
+- ✅ Conditionals (if/else)
+- ✅ **Functions** (function basics, parameters, return values)
+- ✅ **Loops and Arrays**
+- ✅ **DOM Manipulation and Events** (querySelector, addEventListener, etc.)
+- ✅ Objects basics
+- ✅ Problem solving and debugging
+- ✅ Clean code principles
+
+**Previous Projects Completed:**
+1. Recipes (HTML)
+2. Landing Page (HTML + CSS + Flexbox)
+3. Rock Paper Scissors (JavaScript logic + DOM)
+4. Etch-a-Sketch (JavaScript + DOM manipulation + events)
+
+**What This Means for Claude:**
+- ❌ Don't re-explain basic concepts (variables, functions, DOM manipulation)
+- ✅ Assume the user knows how to create functions, use event listeners, manipulate the DOM
+- ✅ Focus guidance on Calculator-specific logic (state management, operation chaining)
+- ✅ Build on their existing knowledge rather than starting from zero
+
 ### Project Requirements (from The Odin Project)
 
 **Step 1: Basic Functions**

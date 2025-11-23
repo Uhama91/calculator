@@ -20,21 +20,21 @@ const operate = (operator, a, b) => {
             return add(a,b);
         case '-':
             return subtract(a,b);
-        case '*':
+        case '×':
             return multiply(a,b);
-        case '/':
+        case '÷':
             return divide(a,b);
         default:
             return null;
     }
 }
 
-let displayFirstNumber = document.getElementById('display');
+let displayNumber = document.getElementById('display');
 let number = document.querySelectorAll('.number');
 
 for (let i=0; i<number.length; i++){
     number[i].addEventListener('click', function(){
-        displayFirstNumber.textContent += number[i].textContent;
+        displayNumber.textContent += number[i].textContent;
     })
 }
 
@@ -45,8 +45,30 @@ let operators= document.querySelectorAll('.operator');
 
 for (let i=0; i<operators.length; i++){
     operators[i].addEventListener('click', function(){
-        firstValueOfOperation = displayFirstNumber.textContent;
+        firstValueOfOperation = displayNumber.textContent;
         operatorOfOperation = operators[i].textContent;
-        displayFirstNumber.textContent = '';
+        displayNumber.textContent = '';
     })
 }
+
+let secondValueOfOperation = null;
+
+let equalButton = document.querySelector('.equal');
+
+equalButton.addEventListener('click', () => {
+    secondValueOfOperation = displayNumber.textContent;
+    if(operatorOfOperation === '÷' && secondValueOfOperation === '0'){
+        displayNumber.textContent = 'Impossible to divide by 0';
+    } else {
+        let result = operate(operatorOfOperation, Number(firstValueOfOperation), Number(secondValueOfOperation));
+        displayNumber.textContent = result;
+    }
+})
+
+let clearButton = document.querySelector('.clear');
+
+clearButton.addEventListener('click', () => {
+    displayNumber.textContent = '';
+    firstValueOfOperation = null;
+    operatorOfOperation = null;
+})

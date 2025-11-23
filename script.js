@@ -31,9 +31,17 @@ const operate = (operator, a, b) => {
 
 let displayNumber = document.getElementById('display');
 let number = document.querySelectorAll('.number');
+let shouldResetDisplay = false;
 
 for (let i=0; i<number.length; i++){
     number[i].addEventListener('click', function(){
+        if(shouldResetDisplay){
+            displayNumber.textContent = '';
+            firstValueOfOperation = null;
+            operatorOfOperation = null;
+            secondValueOfOperation = null;
+            shouldResetDisplay = false;
+        }    
         displayNumber.textContent += number[i].textContent;
     })
 }
@@ -59,9 +67,11 @@ equalButton.addEventListener('click', () => {
     secondValueOfOperation = displayNumber.textContent;
     if(operatorOfOperation === '÷' && secondValueOfOperation === '0'){
         displayNumber.textContent = 'Impossible to divide by 0';
+        shouldResetDisplay = true;
     } else {
         let result = operate(operatorOfOperation, Number(firstValueOfOperation), Number(secondValueOfOperation));
         displayNumber.textContent = result;
+        shouldResetDisplay = true;
     }
 })
 

@@ -1,0 +1,99 @@
+body {
+    width: 35%;
+    height: 300px;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+}
+
+#display {
+    border: 1px solid black;
+    border-radius: 3px;
+    width: auto;
+    height: 20px;
+}
+
+.clear {
+    grid-area: clear;
+}
+
+.backspace {
+    grid-area: backspace;
+}
+
+.divide {
+    grid-area: divide;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight ;
+}
+
+.nine {
+    grid-area: nine;
+}
+
+.multiply {
+    grid-area: multiply;
+}
+
+.four {
+    grid-area:four ;
+}
+
+.five {
+    grid-area:five ;
+}
+
+.six {
+    grid-area: six;
+}
+
+.minus {
+    grid-area: minus;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.add {
+    grid-area: add;
+}
+
+.zero {
+    grid-area: zero;
+}
+
+.point {
+    grid-area: point;
+}
+
+.equal {
+    grid-area: equal;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "clear clear backspace divide "
+    "seven eight nine multiply"
+    "four five six minus"
+    "one two three add"
+    "zero point equal equal";
+}

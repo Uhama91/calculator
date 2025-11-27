@@ -1,3 +1,5 @@
+// calculations
+
 const add = (a, b) => {
     return a + b;
 }
@@ -36,7 +38,7 @@ let backspaceButton = document.querySelector('.backspace')
 
 backspaceButton.addEventListener('click', ()=>{
     let str = displayNumber.textContent;
-    displayNumber.textContent = `${str.slice(0,-1)}`;
+    displayNumber.textContent = str.slice(0,-1);
 })
 
 for (let i = 0; i < number.length; i++) {
